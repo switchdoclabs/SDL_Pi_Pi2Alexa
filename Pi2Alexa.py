@@ -83,7 +83,7 @@ class AlexaMyListener(SubscribeCallback):
     def status(self, pubnub, status):
 	pass 
     def message(self, pubnub, message):
-
+        global LED_State
 	print "message=", message.message
 	# set LED commands
 	LED_State = message.message["LED"]
